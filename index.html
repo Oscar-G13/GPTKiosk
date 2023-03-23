@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT Kiosk</title>
+    <style>
+        body {
+            background-color: black;
+            color: lime;
+            font-family: monospace;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            color: lime;
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"] {
+            color: lime;
+            background-color: black;
+            border: 1px solid lime;
+            font-family: monospace;
+            font-size: 20px;
+            padding: 10px;
+            width: 60%;
+            height: 80px;
+            resize: none;
+            caret-color: lime;
+        }
+
+        /* User input instructions */
+        #promptLabel {
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive design for tablets and mobile devices */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            input[type="text"] {
+                font-size: 18px;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            input[type="text"] {
+                font-size: 16px;
+                width: 100%;
+            }
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            background-color: black;
+            color: lime;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+        }
+
+            footer a {
+                color: lime;
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <h1>GPT Kiosk v0.6</h1>
+    <label for="prompt" id="promptLabel">Type your question here:</label>
+    <form id="promptForm">
+        <input type="text" id="prompt" placeholder="..." autocomplete="off">
+    </form>
+    <div id="response"></div>
+    <footer>
+        <div>
+            <a href="mailto:Oscar@OscorpIndustries.io">Oscar@OscorpIndustries.io</a>
+        </div>
+        <div>
+            <span>&copy; 2023 Oscorp Industries</span>
+        </div>
+    </footer>
+    <script src="chatgpt.js"></script>
+</body>
+</html>
