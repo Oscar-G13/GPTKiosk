@@ -1,3 +1,5 @@
+require('dotenv').config({ path: '/home/oscorcuu/.env' });
+
 document.getElementById("promptForm").addEventListener("submit", async (e) => {
     e.preventDefault();
     const prompt = document.getElementById("prompt").value;
@@ -14,7 +16,7 @@ document.getElementById("promptForm").addEventListener("submit", async (e) => {
 });
 
 async function fetchChatGPT(prompt) {
-    const apiKey = "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";
+    const apiKey = process.env.OPENAI_API_KEY; // What are you looking for? LOL!
     const apiUrl = "https://api.openai.com/v1/engines/gpt-3.5-turbo/completions"; // Changed to the gpt-3.5-turbo model
     const headers = {
         "Content-Type": "application/json",
@@ -26,7 +28,7 @@ async function fetchChatGPT(prompt) {
         "max_tokens": 500,
         "n": 1,
         "stop": null,
-        "temperature": 0.8
+        "temperature": 0.7
     };
 
     const response = await fetch(apiUrl, {
