@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPT Kiosk</title>
+    <title>GPT Kiosk v0.8</title>
     <style>
         body {
             background-color: black;
@@ -120,21 +120,21 @@
     </style>
 </head>
 <body>
-    <h1>GPT Kiosk v0.7</h1>
-    <div id="conversationContainer">
-        <div id="responseContainer"></div>
-        <form id="promptForm">
-            <input type="text" id="prompt" placeholder="..." autocomplete="off">
-        </form>
-    </div>
+    <h1>GPT Kiosk v0.8</h1>
+    <label for="prompt" id="promptLabel">Type your question here:</label>
+    <form id="promptForm">
+        <input type="text" id="prompt" placeholder="..." autocomplete="off" autofocus>
+    </form>
+    <div id="responseContainer"></div>
     <footer>
         <div>
             <a href="mailto:Oscar@OscorpIndustries.io">Oscar@OscorpIndustries.io</a>
         </div>
         <div>
-        <span>&copy; 2023 Oscorp Industries</span>
+            <span>© 2023 Oscorp Industries</span>
         </div>
     </footer>
     <script src="chatgpt.js"></script>
+
 </body>
 </html>

@@ -18,6 +18,7 @@ document.getElementById("promptForm").addEventListener("submit", async (e) => {
     }
 
     document.getElementById("prompt").value = "";
+    document.getElementById("prompt").focus();
 });
 
 async function fetchChatGPT(prompt, conversationHistory) {
