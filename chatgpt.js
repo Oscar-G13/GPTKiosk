@@ -5,6 +5,7 @@ document.getElementById("promptForm").addEventListener("submit", async (e) => {
     const prompt = document.getElementById("prompt").value;
     const responseContainer = document.getElementById("responseContainer");
     const responseElement = document.createElement("p");
+    responseElement.classList.add("response-text");
     responseContainer.appendChild(responseElement);
     responseElement.textContent = "> " + prompt;
 
